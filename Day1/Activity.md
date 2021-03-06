@@ -9,6 +9,10 @@ TABLE 1 :
 
 TABLE 2 :
 
+![table2](https://user-images.githubusercontent.com/78849193/110205499-486d7e80-7e9e-11eb-859b-67d36759a9f7.PNG)
+
+
+
 Query1:
 
 ![Q1](https://user-images.githubusercontent.com/78849193/110204741-c0d24080-7e9a-11eb-9c05-9d473da957b4.PNG)
