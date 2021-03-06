@@ -114,6 +114,22 @@ Query7:
 ![k7](https://user-images.githubusercontent.com/78849193/110205227-e7917680-7e9c-11eb-90a6-fbbddcf87e71.PNG)
 
 
+Query9:
+
+![k9](https://user-images.githubusercontent.com/78849193/110205472-11976880-7e9e-11eb-82cb-113658b6ef6a.PNG)
+
+
+Query10:
+
+![k10](https://user-images.githubusercontent.com/78849193/110205478-1bb96700-7e9e-11eb-9aae-d21e93467656.PNG)
+
+
+Quert11:
+
+
+![k11](https://user-images.githubusercontent.com/78849193/110205483-27a52900-7e9e-11eb-9060-26f64c8d9844.PNG)
+
+
 
 
 
