@@ -10,15 +10,12 @@ public class Player {
 	private int wickets;
 	private int number_of_matches;
 	private int team_id;
-	
-	
-	public Player() {
+	public Player() 
+	{
 		super();
 	}
-
-
-	public Player(int player_id, String name, Date dateOfBirth, String nationality, String skills, int runs,
-			int wickets, int number_of_matches, int team_id) {
+	public Player(int player_id, String name, Date dateOfBirth, String nationality, String skills, int runs,int wickets, int number_of_matches, int team_id)
+	{
 		super();
 		Player_id = player_id;
 		this.name = name;
@@ -30,69 +27,77 @@ public class Player {
 		this.number_of_matches = number_of_matches;
 		this.team_id = team_id;
 	}
-
-
-	public int getPlayer_id() {
+	public int getPlayer_id() 
+	{
 		return Player_id;
 	}
 
-
-	public void setPlayer_id(int player_id) {
+	public void setPlayer_id(int player_id) 
+	{
 		Player_id = player_id;
 	}
 
 
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
-
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
 
-
-	public Date getDateOfBirth() {
+	public Date getDateOfBirth()
+	{
 		return dateOfBirth;
 	}
 
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth)
+	{
 		this.dateOfBirth = dateOfBirth;
 	}
 
 
-	public String getNationality() {
+	public String getNationality() 
+	{
 		return nationality;
 	}
 
 
-	public void setNationality(String nationality) {
+	public void setNationality(String nationality)
+	{
 		this.nationality = nationality;
 	}
 
 
-	public String getSkills() {
+	public String getSkills()
+	{
 		return skills;
 	}
 
 
-	public void setSkills(String skills) {
+	public void setSkills(String skills)
+	{
 		this.skills = skills;
 	}
 
 
-	public int getRuns() {
+	public int getRuns() 
+	{
 		return runs;
 	}
 
 
-	public void setRuns(int runs) {
+	public void setRuns(int runs)
+	{
 		this.runs = runs;
 	}
 
 
-	public int getWickets() {
+	public int getWickets()
+	{
 		return wickets;
 	}
 
@@ -128,5 +133,6 @@ public class Player {
 				+ nationality + ", skills=" + skills + ", runs=" + runs + ", wickets=" + wickets
 				+ ", number_of_matches=" + number_of_matches + ", team_id=" + team_id + "]";
 	}
+
 	
 }

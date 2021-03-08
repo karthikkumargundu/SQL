@@ -2,16 +2,15 @@ package com.ltts.Dao;
 import java.sql.Date;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import com.ltts.Configuration.MyConnection;
 import com.ltts.model.Player;
 
 public class PlayerDao {
-	private static final Statement MyConnection = null;
-
 	public List<Player> getAllPlayers()
 	{
 		List<Player> li= new ArrayList<Player>();
@@ -36,7 +35,48 @@ public class PlayerDao {
 		ps.setInt(7, p.getWickets());
 		ps.setInt(8, p.getNumber_of_matches());
 		ps.setInt(9, p.getTeam_id());
+		System.out.println("Data Inserted Succesfully");
 		return ps.execute();
+		
+	}
+	
+	public void getAll(String name) throws Exception
+	{
+		Connection c= MyConnection.getConnection();
+		PreparedStatement ps=c.prepareStatement("Select p.playername,t.teamname,t.coachname,TIMESTAMPDIFF(YEAR, dateOfBirth, CURDATE()) AS age from player as p inner join team as t on p.team_id=t.team_id where p.playername=?");
+		ps.setString(1, name);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			String name1=rs.getNString(1);
+			String n=rs.getString(2);
+			String cn=rs.getString(3);
+			String dob=rs.getString(4);
+			System.out.println("Player Name: "+name1+" Team Name: "+n+" Coach Name: "+cn+" Age: "+dob);
+			
+		}
 	}
 
+	public boolean updatePlayer(int id,String name) throws Exception
+	{
+		Connection c= MyConnection.getConnection();
+		PreparedStatement ps= c.prepareStatement("UPDATE player SET playername=? WHERE player_id=?");
+		ps.setString(1, name);
+		ps.setInt(2, id);
+		System.out.println("Data Updated Succesfully");
+		return ps.execute();
+	}
+	
+	public void showPlayer() throws Exception
+	{
+		Connection c= MyConnection.getConnection();
+		PreparedStatement ps=c.prepareStatement("Select * from player;");
+		ps.execute();
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getDate(3)+" "+rs.getString(4)+" "+rs.getString(5)+" "+rs.getInt(6)+" "+rs.getInt(7)+" "+rs.getInt(8)+" "+rs.getInt(9));
+			
+		}
+	}
 }
